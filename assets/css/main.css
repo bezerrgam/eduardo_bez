@@ -1,37 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-html, body{
-    background-color: rgb(2, 10, 1);
-    margin: 0;
-    padding: 0;
-    background-image: url('https://bezerrgam.github.io/eduardo_bez/assets/img/background.png');
-    border: 0;  
+* {
+  overflow: hidden;
+  border: 0;  
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+}
+
+body {
+  background-color: rgb(2, 10, 1);
+  background-image: url('https://bezerrgam.github.io/eduardo_bez/assets/img/background.png');
+  animation: slideAnimation 1s linear infinite;
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.438);
-    display: block;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 700px;
-    margin-top: 130px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 600px;
 }
 
-.content h1{
+.content h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
+    font-size: 20pt;
     color: aliceblue;
+    text-align: center;
 }
 
 .eduardo_head {
-    margin-top: 2%;
-    height: 190px;
-    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
     animation: rotation 1600ms infinite;
 }
 
@@ -41,5 +54,14 @@ html, body{
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+@keyframes slideAnimation {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 26px;
     }
   }
